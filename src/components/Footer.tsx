@@ -1,5 +1,4 @@
-import { ArrowUp, Heart, ExternalLink } from 'lucide-react';
-import { COMMUNITY_DATA } from '../data/communityData';
+import { ArrowUp, Heart } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -41,15 +40,6 @@ export default function Footer() {
             </a>
             <a href="#contact" className="hover:text-[#FD5D3D] transition-colors">
               Contact
-            </a>
-            <a
-              href={COMMUNITY_DATA.contact.canvaSite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#FD5D3D] hover:underline inline-flex items-center gap-1"
-            >
-              <span>Canva Site</span>
-              <ExternalLink className="w-3 h-3" />
             </a>
           </div>
 

@@ -33,7 +33,7 @@ export const COMMUNITY_DATA = {
   codeAndNoCodeDesc: "We believe that impactful contributions come in many forms. Open source isn't just about programming, it is about people. From design, documentation and translation to storytelling, community building, and mentorship, everyone has a role to play.",
 
   contact: {
-    email: "everythingopensource@gmail.com",
+    email: "hello@everythingopensource.org",
     canvaSite: "https://everythingopensource.my.canva.site/",
     canvaDisplayUrl: "everythingopensource.my.canva.site",
     socials: [

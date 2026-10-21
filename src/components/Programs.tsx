@@ -118,7 +118,7 @@ export default function Programs({ onSelectProgram }: ProgramsProps) {
                     onClick={() => onSelectProgram(program)}
                     className="text-xs sm:text-sm font-bold text-[#FD5D3D] hover:text-[#6E1200] transition-colors inline-flex items-center gap-1.5 cursor-pointer"
                   >
-                    <span>View Curriculum &amp; Sprints</span>
+                    <span>View</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
 

@@ -1,0 +1,6 @@
+{
+  "name": "Everything Open Source",
+  "description": "The official website for the Everything Open Source community, spotlighting diverse paths into open source, code and no-code contributions, programs, and resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

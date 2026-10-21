@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Bogart", Georgia, serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-arimo: "Arimo", sans-serif;
+
+  --color-canva-peach: #FFDCD5;
+  --color-canva-peach-light: #FFF4F1;
+  --color-canva-coral: #FD5D3D;
+  --color-canva-coral-soft: #FEAB9B;
+  --color-canva-maroon: #6E1200;
+  --color-canva-dark: #1A1E2D;
+  --color-canva-slate: #304254;
+  --color-canva-yellow: #F6B737;
+  --color-canva-teal: #7EC0A4;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-display {
+  font-family: "Fraunces", "Bogart", Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-arimo {
+  font-family: "Arimo", sans-serif;
+}
+
+/* Custom scrollbar and subtle animations */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #FEAB9B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FD5D3D;
+}

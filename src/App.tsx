@@ -35,11 +35,11 @@ export default function App() {
         {/* Programs Section (Explorers, Resources, Moonshot, Wikipedia Docs) */}
         <Programs onSelectProgram={(prog) => setSelectedProgram(prog)} />
 
-        {/* Books for Techies & Events Spotlight */}
+        {/* Community Impact in Action (2-Column: Embedded YouTube Video & Open Source Events) */}
         <BooksForTechies />
 
         {/* Contact & Social Links Section */}
-        <ContactSection onOpenJoinModal={() => setIsJoinModalOpen(true)} />
+        <ContactSection />
       </main>
 
       {/* Quiet Footer */}

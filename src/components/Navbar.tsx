@@ -27,12 +27,12 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
         </a>
 
         {/* Zone 2: Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#1A1E2D]/80">
+        <nav className="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-[#1A1E2D]/80">
           <a
             href="#about"
             className="whitespace-nowrap shrink-0 hover:text-[#FD5D3D] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FD5D3D] hover:after:w-full after:transition-all"
           >
-            Why We Exist
+            About Us
           </a>
           <a
             href="#programs"
@@ -44,7 +44,16 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
             href="#resources"
             className="whitespace-nowrap shrink-0 hover:text-[#FD5D3D] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FD5D3D] hover:after:w-full after:transition-all"
           >
-            Resources &amp; Events
+            Events
+          </a>
+          <a
+            href="https://everythingopensource.hashnode.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap shrink-0 hover:text-[#FD5D3D] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#FD5D3D] hover:after:w-full after:transition-all inline-flex items-center gap-1"
+          >
+            <span>Blog</span>
+            <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
           </a>
           <a
             href="#contact"
@@ -88,7 +97,7 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
             onClick={() => setMobileMenuOpen(false)}
             className="block text-base font-medium text-[#1A1E2D] hover:text-[#FD5D3D]"
           >
-            Why We Exist
+            About Us
           </a>
           <a
             href="#programs"
@@ -102,7 +111,17 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
             onClick={() => setMobileMenuOpen(false)}
             className="block text-base font-medium text-[#1A1E2D] hover:text-[#FD5D3D]"
           >
-            Resources &amp; Events
+            Events
+          </a>
+          <a
+            href="https://everythingopensource.hashnode.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center justify-between text-base font-medium text-[#1A1E2D] hover:text-[#FD5D3D]"
+          >
+            <span>Blog</span>
+            <ArrowUpRight className="w-4 h-4 text-[#FD5D3D]" />
           </a>
           <a
             href="#contact"

@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Quick Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-[#1A1E2D]/80">
             <a href="#about" className="hover:text-[#FD5D3D] transition-colors">
-              Why We Exist
+              About Us
             </a>
             <a href="#programs" className="hover:text-[#FD5D3D] transition-colors">
               Programs

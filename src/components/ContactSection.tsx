@@ -1,12 +1,8 @@
 import { useState } from 'react';
-import { ArrowRight, Copy, Check } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 import { COMMUNITY_DATA } from '../data/communityData';
 
-interface ContactSectionProps {
-  onOpenJoinModal?: () => void;
-}
-
-export default function ContactSection({ onOpenJoinModal }: ContactSectionProps) {
+export default function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const copyEmailToClipboard = (e: React.MouseEvent) => {
@@ -60,49 +56,51 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
   ];
 
   return (
-    <section id="contact" className="border-t border-[#F2C4BC]/60">
+    <section id="contact" className="border-t border-[#F2C4BC]">
       <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch">
         
         {/* Column 1: White Panel - COMMUNITY */}
-        <div className="bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#EFE9DF]">
+        <div className="bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#F2C4BC]/70">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A83B] block mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#FD5D3D] block mb-4">
               COMMUNITY
             </span>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#1A1E2D] tracking-tight mb-6">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#1A1E2D] tracking-tight mb-5">
               Join the Community
             </h2>
-            <p className="text-sm sm:text-base text-[#1A1E2D]/70 leading-relaxed max-w-sm">
-              Become part of a vibrant network of people passionate about technology. Access resources, opportunities, and a community that actually shows up for you.
+            <p className="text-sm sm:text-base text-[#1A1E2D]/80 leading-relaxed max-w-sm">
+              Become part of a vibrant network of people passionate about open source and technology. Access resources, opportunities, and a community that actually shows up for you.
             </p>
           </div>
 
           <div className="pt-12 sm:pt-16">
-            <button
-              onClick={onOpenJoinModal}
-              className="group inline-flex items-center gap-1.5 text-base sm:text-lg font-normal text-[#1A1E2D] hover:text-[#FD5D3D] transition-colors pb-1 border-b-2 border-[#E5A83B] hover:border-[#FD5D3D] cursor-pointer"
+            <a
+              href="https://discord.gg/7p2yqaazFJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 text-base sm:text-lg font-bold text-[#1A1E2D] hover:text-[#FD5D3D] transition-colors pb-1 border-b-2 border-[#FD5D3D] cursor-pointer"
             >
               <span>Join the community</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+            </a>
           </div>
         </div>
 
-        {/* Column 2: Warm Ecru/Cream Panel - FOLLOW ALONG */}
-        <div className="bg-[#FAF6EF] p-8 sm:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#EFE9DF]">
+        {/* Column 2: Warm Peach Blush Panel - FOLLOW ALONG */}
+        <div className="bg-[#FFF4F1] p-8 sm:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#F2C4BC]/70">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A83B] block mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#6E1200] block mb-4">
               FOLLOW ALONG
             </span>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#1A1E2D] tracking-tight mb-6">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#1A1E2D] tracking-tight mb-5">
               Social media
             </h2>
-            <p className="text-sm sm:text-base text-[#1A1E2D]/70 leading-relaxed max-w-sm mb-10">
+            <p className="text-sm sm:text-base text-[#6E1200]/80 leading-relaxed max-w-sm mb-10">
               We post about programs, events, opportunities, and community wins across all our channels.
             </p>
 
             {/* Social rows list */}
-            <div className="divide-y divide-[#EFE9DF]">
+            <div className="divide-y divide-[#F2C4BC]/70">
               {socialChannels.map((soc) => (
                 <a
                   key={soc.name}
@@ -112,12 +110,12 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
                   className="py-3.5 flex items-center justify-between text-sm text-[#1A1E2D] hover:text-[#FD5D3D] group transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-[#1A1E2D]/60 group-hover:text-[#FD5D3D] transition-colors">
+                    <span className="text-[#6E1200] group-hover:text-[#FD5D3D] transition-colors">
                       {soc.icon}
                     </span>
                     <span className="font-medium">{soc.name}</span>
                   </div>
-                  <span className="text-xs text-[#1A1E2D]/50 group-hover:text-[#FD5D3D] transition-colors">
+                  <span className="text-xs text-[#6E1200]/70 group-hover:text-[#FD5D3D] transition-colors">
                     {soc.handle}
                   </span>
                 </a>
@@ -125,20 +123,19 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
             </div>
           </div>
 
-          {/* Spacer so height balances with adjacent columns */}
           <div className="pt-8" />
         </div>
 
-        {/* Column 3: Charcoal/Black Panel - SAY HELLO */}
-        <div className="bg-[#1E2024] p-8 sm:p-12 lg:p-16 flex flex-col justify-between text-white">
+        {/* Column 3: Signature Deep Maroon Panel - SAY HELLO */}
+        <div className="bg-[#6E1200] p-8 sm:p-12 lg:p-16 flex flex-col justify-between text-white">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A83B] block mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#FEAB9B] block mb-4">
               SAY HELLO
             </span>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-white tracking-tight mb-6">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-5">
               Send us an email
             </h2>
-            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-sm">
+            <p className="text-sm sm:text-base text-[#FFDCD5]/90 leading-relaxed max-w-sm">
               Ideas, collaborations, partnerships, questions — we read everything and reply as soon as we can.
             </p>
           </div>
@@ -147,7 +144,7 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
             <div className="flex items-center gap-3">
               <a
                 href={`mailto:${COMMUNITY_DATA.contact.email}`}
-                className="group inline-flex items-center gap-1.5 text-base sm:text-lg font-normal text-[#E5A83B] hover:text-white transition-colors pb-1 border-b-2 border-[#E5A83B] hover:border-white break-all"
+                className="group inline-flex items-center gap-1.5 text-base sm:text-lg font-semibold text-white hover:text-[#FFDCD5] transition-colors pb-1 border-b-2 border-[#FD5D3D] hover:border-white break-all"
               >
                 <span>{COMMUNITY_DATA.contact.email}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -155,7 +152,7 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
 
               <button
                 onClick={copyEmailToClipboard}
-                className="p-1.5 text-neutral-400 hover:text-[#E5A83B] transition-colors cursor-pointer"
+                className="p-1.5 text-[#FEAB9B] hover:text-white transition-colors cursor-pointer"
                 title="Copy email address"
                 aria-label="Copy email address"
               >
@@ -167,7 +164,7 @@ export default function ContactSection({ onOpenJoinModal }: ContactSectionProps)
               </button>
             </div>
             {copiedEmail && (
-              <span className="text-xs text-[#7EC0A4] block mt-1.5 font-medium">
+              <span className="text-xs text-[#FEAB9B] block mt-1.5 font-medium">
                 Email copied to clipboard!
               </span>
             )}
